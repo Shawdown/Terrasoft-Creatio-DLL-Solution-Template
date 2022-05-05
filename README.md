@@ -21,6 +21,6 @@
 1. Пишем код в проекте `Navicon.Configuration`;
 
 2. Собираем проект `Navicon.Configuration`;
-   * [x] После сборки `Navicon.Configuration` автоматически скопирует выходной DLL и создаст/обновит связанный _descriptor.json_ в директории проекта с внешней сборкой.
+   * [x] После сборки `Navicon.Configuration` автоматически скопирует выходной DLL и создаст/обновит связанный _descriptor.json_ в директории пакета с внешней сборкой.
 
 3. Запускаем `UpdateDbAndCompile.bat` в корне проекта `Navicon.Configuration` для обновления БД и компиляции приложения Creatio. **Это не нужно делать, если** `UpdateDbAndCompile.bat`**автоматически запускается после каждого билда (см. _п.7_ выше).**
