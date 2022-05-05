@@ -63,8 +63,10 @@
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
          Other similar extension points exist, see Microsoft.Common.targets.
+    -->
     <Target Name="BeforeBuild">
-    </Target>-->
+        <Exec Command="CopyLatestTerrasoftConfigurationDll.bat" />
+    </Target>
     <Target Name="AfterBuild">
         <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(SolutionDir)..\Terrasoft.Configuration\Pkg\%DLL_PACKAGE_NAME%\Assemblies\$(TargetName)\" />
         <Exec Command="$(SolutionDir)DllDescriptorJsonGenerator\bin\Debug\DllDescriptorJsonGenerator.exe $(SolutionDir)..\Terrasoft.Configuration\Pkg\%DLL_PACKAGE_NAME%\Assemblies\$(TargetName)\descriptor.json $(TargetName)" />
