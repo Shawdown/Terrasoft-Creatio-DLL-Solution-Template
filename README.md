@@ -14,13 +14,15 @@
 3. Открываем текстовым редактором файл проекта `Navicon.Configuration.csproj` и заменяем все **%DLL_PACKAGE_NAME%** на название пакета, в котором будет находиться DLL (прим. _Custom_);
 4. Открываем Solution и восстанавливаем NuGet-пакеты для проекта `DllDescriptorJsonGenerator`;
 5. Собираем `DllDescriptorJsonGenerator`;
-6. **(Опционально)** Меняем название проекта с DLL-библиотекой и выходного DLL-файла, отредактировав `Navicon.Configuration.csproj` и `Navicon.Configuration.sln`;
-7. **(Опционально)** Если после билда требуется заливать изменения пакетов в БД и компилировать приложение Creatio, то раскомментировать в файле `Navicon.Configuration.csproj` строчку `<!--<Exec Command="UpdateDbAndCompile.bat"/>-->`
+6. Компилируем приложение Creatio, если это еще не было сделано;
+7. **(Опционально)** Меняем название проекта с DLL-библиотекой и выходного DLL-файла, отредактировав `Navicon.Configuration.csproj` и `Navicon.Configuration.sln`;
+8. **(Опционально)** Если после билда требуется заливать изменения пакетов в БД и компилировать приложение Creatio, то раскомментировать в файле `Navicon.Configuration.csproj` строчку `<!--<Exec Command="UpdateDbAndCompile.bat"/>-->`
 
 # Как пользоваться
 1. Пишем код в проекте `Navicon.Configuration`;
 
 2. Собираем проект `Navicon.Configuration`;
-   * [x] После сборки `Navicon.Configuration` автоматически скопирует выходной DLL и создаст/обновит связанный _descriptor.json_ в директории пакета с внешней сборкой.
+   * [ ] ДО сборки автоматически скопируются последние версии `Terrasoft.Configuration.dll` и `Terrasoft.Configuration.ODataEntities.dll` из поддиректории **Terrasoft.WebApp\conf\bin\XXX\\**;
+   * [ ] ПОСЛЕ сборки выходной DLL автоматически скопируется и будет создан/обновится связанный _descriptor.json_ в директории пакета с внешней сборкой.
 
 3. Запускаем `UpdateDbAndCompile.bat` в корне проекта `Navicon.Configuration` для обновления БД и компиляции приложения Creatio. **Это не нужно делать, если** `UpdateDbAndCompile.bat`**автоматически запускается после каждого билда (см. _п.7_ выше).**
