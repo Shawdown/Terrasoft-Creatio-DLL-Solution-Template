@@ -7,7 +7,7 @@
 
 # Требования к среде
 1. Режим разработки в файловой системе должен быть включен;
-2. Стандартная утилита `WorkspaceConsole` должна быть развернута в директории `Terrasoft.WebApp\DesktopBin\WorkspaceConsole`. Чтобы сделать это, запускаем `PrepareWorkspaceConsole.x64.bat` или `PrepareWorkspaceConsole.x86.bat` в соответствующей директории.
+2. Стандартная утилита `WorkspaceConsole` должна быть развернута в директории `Terrasoft.WebApp\DesktopBin\WorkspaceConsole`. Чтобы сделать это, запускаем `PrepareWorkspaceConsole.x64.bat` или `PrepareWorkspaceConsole.x86.bat` в соответствующей директории и обновляем строки подключения к БД в конфигурационном файле утилиты.
 
 # Как настроить
 2. Копируем папку с решением `Navicon.Configuration` в `Terrasoft.WebApp`. Папка решения `Navicon.Configuration` должна находиться на одном уровне с `Terrasoft.Configuration`;
