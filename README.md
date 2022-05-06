@@ -15,8 +15,9 @@
 4. Открываем Solution и восстанавливаем NuGet-пакеты для проекта `DllDescriptorJsonGenerator`;
 5. Собираем `DllDescriptorJsonGenerator`;
 6. Компилируем приложение Creatio, если это еще не было сделано;
-7. **(Опционально)** Меняем название проекта с DLL-библиотекой и выходного DLL-файла, отредактировав `Navicon.Configuration.csproj` и `Navicon.Configuration.sln`;
-8. **(Опционально)** Если после билда требуется заливать изменения пакетов в БД и компилировать приложение Creatio, то раскомментировать в файле `Navicon.Configuration.csproj` строчку `<!--<Exec Command="UpdateDbAndCompile.bat"/>-->`
+7. Выполняем скрипт `CopyLatestTerrasoftConfigurationDll.bat` из корня проекта `Navicon.Configuration`;
+8. **(Опционально)** Меняем название проекта с DLL-библиотекой и выходного DLL-файла, отредактировав `Navicon.Configuration.csproj` и `Navicon.Configuration.sln`;
+9. **(Опционально)** Если после билда требуется заливать изменения пакетов в БД и компилировать приложение Creatio, то раскомментировать в файле `Navicon.Configuration.csproj` строчку `<!--<Exec Command="UpdateDbAndCompile.bat"/>-->`
 
 # Как пользоваться
 1. Пишем код в проекте `Navicon.Configuration`;
