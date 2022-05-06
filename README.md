@@ -12,7 +12,7 @@
 # Как настроить
 2. Копируем папку с решением `Navicon.Configuration` в `Terrasoft.WebApp`. Папка решения `Navicon.Configuration` должна находиться на одном уровне с `Terrasoft.Configuration`;
 3. Открываем текстовым редактором файл проекта `Navicon.Configuration.csproj` и заменяем все **%DLL_PACKAGE_NAME%** на название пакета, в котором будет находиться DLL (прим. _Custom_);
-4. Открываем Solution и восстанавливаем NuGet-пакеты для всего решения;
+4. Открываем Solution и восстанавливаем NuGet-пакеты;
 5. Собираем `DllDescriptorJsonGenerator`;
 6. Компилируем приложение Creatio, если это еще не было сделано;
 7. Выполняем скрипт `CopyLatestTerrasoftConfigurationDll.bat` из корня проекта `Navicon.Configuration`;
